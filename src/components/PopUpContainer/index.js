@@ -12,6 +12,7 @@ const PopUpContainer = (props) => {
   let speechSynthesisUtterance = null;
 
   const closePopUp = () => {
+    speechSynthesis.cancel();
     if (speechSynthesisUtterance) {
       speechSynthesisUtterance.onend = null;
       speechSynthesisUtterance = null;
